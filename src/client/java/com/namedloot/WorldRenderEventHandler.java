@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
@@ -81,7 +82,12 @@ public class WorldRenderEventHandler {
 
             // Get render state
             MatrixStack matrices = context.matrixStack();
-            float tickDelta = context.tickCounter().getTickDelta(false);
+            float tickDelta = 0;
+            try {
+                tickDelta = context.tickCounter().getTickDelta(false);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
 
             TextRenderer textRenderer = client.textRenderer;
             VertexConsumerProvider.Immediate immediate = client.getBufferBuilders().getEntityVertexConsumers();
