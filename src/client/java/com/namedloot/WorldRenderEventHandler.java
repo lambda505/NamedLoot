@@ -249,7 +249,7 @@ public class WorldRenderEventHandler {
 
         if (shouldShowDetails && !details.isEmpty()) {
             float yOffset = 0;
-            int detailColor = 0xAAAAAA;
+            int detailColor = 0xFFAAAAAA;
             for (Text detail : details) {
                 textRenderer.draw(
                         detail,
