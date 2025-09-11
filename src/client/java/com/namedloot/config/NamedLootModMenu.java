@@ -986,7 +986,7 @@ public class NamedLootModMenu implements ModMenuApi {
         @Override
         public void render(DrawContext context, int mouseX, int mouseY, float delta) {
             // Render background
-            this.renderBackground(context, mouseX, mouseY, delta);
+            //this.renderBackground(context, mouseX, mouseY, delta);
 
             // Draw title
             Text titleText = Text.literal("✦ ").formatted(Formatting.GOLD)
