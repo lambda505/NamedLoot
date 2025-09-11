@@ -25,4 +25,4 @@ Highly configurable through an intuitive ModMenu interface - adjust colors, back
 
 ## Compatible With 
 - Fabric Loader
-- Minecraft 1.21.4 and 1.21.5 
+- Minecraft 1.21.7 and 1.21.8 
